@@ -1,0 +1,52 @@
+{% extends "AppTienda/inicio.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+Listado Vinilos
+
+{% endblock %}
+
+{% block encabezado %}
+
+Listado Vinilos
+
+{% endblock %}
+
+
+{% block encabezado2 %}
+<h3>
+Pedinos el álbum que necesites y te lo traemos!</h3>
+
+
+
+{% endblock %}
+
+{% block buscador %}
+<br>
+            
+
+                <form action="/AppTienda/resultadoBusqueda/" method="GET">
+
+                    <input type="text" name="artista" id="artista" placeholder="Buscar Album">
+                    <input type="submit" value="Buscar">
+                
+                
+                </form>
+{% endblock %}
+
+{% block resultados %}
+{% for artista in tienda %}
+    <h2 style="color: #FF6A00"> RESULTADOS DE LA BÚSQUEDA: <i> {{artista}} </i> </h2>
+
+       
+
+    <p>
+    <b> Artista:</b> {{tienda.artista}} <br>  <b>Album:</b>{{tienda.album}} <br>  <b> Precio $:</b> {{tienda.codigo}}<br> <b>Género:</b> {{tienda.genero}}<br><br>
+
+
+        
+{% endfor %}
+{% endblock %}
+

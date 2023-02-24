@@ -1,0 +1,35 @@
+{% extends "AppTienda/inicio.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+Editar Perfil
+
+{% endblock %}
+
+
+{% block encabezado %}
+<h1>
+       Acá podés editar la información de tu cuenta. </h1>
+{% endblock %}
+
+{% block encabezado2 %}
+{% endblock %}
+
+{% block blog %}
+<br>
+
+<form action="" method="POST">{% csrf_token %}
+
+       {{formulario.as_p}}
+       <button type="submit" class="btn3">Editar Perfil</button>
+
+
+
+</form>
+
+ 
+<br>
+
+{% endblock %}

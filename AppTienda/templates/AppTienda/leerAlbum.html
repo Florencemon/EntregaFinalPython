@@ -1,0 +1,50 @@
+{% extends "AppTienda/inicio.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+Listado Vinilos
+
+{% endblock %}
+
+{% block encabezado %}
+
+Listado Vinilos
+
+{% endblock %}
+
+
+{% block encabezado2 %}
+<h3>
+Pedinos el álbum que necesites y te lo traemos!</h3>
+
+
+
+{% endblock %}
+
+
+
+{% block blog %}
+{% for objet1 in albms %}
+       <p>
+              Album {{objet1.album}} de {{objet1.artista}}({{objet1.fechaLanzamiento}}) en formato {{objet1.formato}} Pais de Origen: {{objet1.paisOrigen}} <br>
+              Genero {{objet1.genero}} <br>SubGenero: {{objet1.subGenero}} <br>Descripción: {{objet1.descripcion}}<br>
+              PRECIO: $ {{objet1.codigo}}
+
+              <button class="btn2" value="eliminar"> 
+                     <a href="{% url 'editarAlbum' objet1.album %}" name="Editar" target="_blank">✏️</a>
+              </button>
+
+              <button class="btn1" value="eliminar"> 
+                     <a href="{% url 'albumEliminar' objet1.album %}" name="Eliminar" target="_blank">🗑️</a>
+              </button>
+       </p>
+{% endfor %}
+{% endblock %}
+
+
+
+
+       
+ 

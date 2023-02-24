@@ -9,8 +9,4 @@ admin.site.register(Cliente)
 admin.site.register(Cotizar)
 admin.site.register(Suscribete)
 admin.site.register(Preventa)
-
-
-
-
-
+admin.site.register(AvatarImagen)
