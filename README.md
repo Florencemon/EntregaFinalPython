@@ -34,12 +34,12 @@ Botones para editar o borrar ítems
 
 Ruta para cerrar sesión y sólo se ve cuando el usuario ya ingresó.
 
-## editar Perfil
+## Editar Perfil
 
 Te permite ver tus datos de perfil.
 
 
-## añadir ítem
+## Añadir ítem
 
 Devuelve formulario para crear ítems en la tienda (opción habilitada si el usuario está logeado).
 
